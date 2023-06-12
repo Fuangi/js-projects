@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font: 1rem monospace;
+    background: rgba(78, 151, 127, 0.7);
+}
+h1{
+    text-align: center;
+    margin: 1.5rem;
+}
+p{
+    margin-left: 200px;
+    margin-top: 1rem;
+}
+h5{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem;
+}
+input{
+    height: 50px;
+    width: 100px;
+    padding: 0.75rem;
+    margin: 10px auto;
+    border: 1px solid rgba(78, 151, 127, 0.7);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px lightslategray;
+}
