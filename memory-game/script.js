@@ -1,52 +1,52 @@
 //declaring an array to hold the images(as objects) that the user will see 
 const cardsArray = [
     {
-        picName: 'doc-faq',
-        img: 'images/doc-faq.png'
+        picName: 'cheeseburger',
+        img: 'images/cheeseburger.png'
     },
     {
-        picName: 'doc-heart',
-        img: 'images/doc-heart.png'
+        picName: 'fries',
+        img: 'images/fries.png'
     },
     {
-        picName: 'doctor',
-        img: 'images/doctor.png'
+        picName: 'hotdog',
+        img: 'images/hotdog.png'
     },
     {
-        picName: 'records',
-        img: 'images/records.png'
+        picName: 'ice-cream',
+        img: 'images/ice-cream.png'
     },
     {
-        picName: 'reminder',
-        img: 'images/reminder.png'
+        picName: 'milkshake',
+        img: 'images/milkshake.png'
     },
     {
-        picName: 'stethoscope',
-        img: 'images/stetho.png'
+        picName: 'pizza',
+        img: 'images/pizza.png'
     },
     {
-        picName: 'doc-faq',
-        img: 'images/doc-faq.png'
+        picName: 'cheeseburger',
+        img: 'images/cheeseburger.png'
     },
     {
-        picName: 'doc-heart',
-        img: 'images/doc-heart.png'
+        picName: 'fries',
+        img: 'images/fries.png'
     },
     {
-        picName: 'doctor',
-        img: 'images/doctor.png'
+        picName: 'hotdog',
+        img: 'images/hotdog.png'
     },
     {
-        picName: 'records',
-        img: 'images/records.png'
+        picName: 'ice-cream',
+        img: 'images/ice-cream.png'
     },
     {
-        picName: 'reminder',
-        img: 'images/reminder.png'
+        picName: 'milkshake',
+        img: 'images/milkshake.png'
     },
     {
-        picName: 'stethoscope',
-        img: 'images/stetho.png'
+        picName: 'pizza',
+        img: 'images/pizza.png'
     }
 ]
 
@@ -65,7 +65,7 @@ const gridDisplay = document.querySelector('#grid') //to show that it's looking 
 function createBoard(){
     for(let i = 0; i <cardsArray.length; i++){
         const card = document.createElement('img')
-        card.setAttribute('src', 'images/available.png')
+        card.setAttribute('src', 'images/blank.png')
         card.setAttribute('data-id', i) //to give each a unique id
         card.addEventListener('click', flipCard, false)
       //adding the cards to the grid in the browser
@@ -106,24 +106,24 @@ function checkMatch(){
     const optionTwoId = cardsChosenId[1]
     //to notify if the same card has been clicked
     if(optionOneId == optionTwoId){
-        card[optionOneId].setAttribute('src', 'images/available.png')
-        card[optionTwoId].setAttribute('src', 'images/available.png')
+        card[optionOneId].setAttribute('src', 'images/blank.png')
+        card[optionTwoId].setAttribute('src', 'images/blank.png')
         alert("you clicked the same card")
     }
 //to check if the cards chosen match
     if(cardsChosen[0] == cardsChosen[1]){
         alert("You found a match!, you're doing great👊👍")
         //to remove the cards from the list 
-        card[optionOneId].setAttribute('src', 'images/a1.jpg')
-        card[optionTwoId].setAttribute('src', 'images/a1.jpg')
+        card[optionOneId].setAttribute('src', 'images/white.png')
+        card[optionTwoId].setAttribute('src', 'images/white.png')
      //to stop the cards from listening to the click event
         card[optionOneId].removeEventListener('click', flipCard, false) 
         card[optionTwoId].removeEventListener('click', flipCard, false) 
     //to put the cards into the won category
     cardsWon.push(cardsChosen)
     }else{ //to flip them back if they are not the same
-        card[optionOneId].setAttribute('src', 'images/available.png')
-        card[optionTwoId].setAttribute('src', 'images/available.png')
+        card[optionOneId].setAttribute('src', 'images/blank.png')
+        card[optionTwoId].setAttribute('src', 'images/blank.png')
         alert("Sorry, try again")
     }
     //setting the cards chosen array and the chosen id array to empy to start over
